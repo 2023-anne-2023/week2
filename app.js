@@ -1,33 +1,43 @@
-console.log("COOKIE CLICKER");
-let counter = 0; 
-const sold = document.getElementById("sold");
-const classic= document.getElementById("classic");
+console.log("Cookie Clicker");
+let data = {
+    classic: 0,
+    christmas: 0,
+  };
 
+const classic = document.getElementById("classic");
+console.log(classic);
+const christmas = document.getElementById("christmas");
 
-
-function addOne() {
-    counter++;
-    sold.textContent = counter;
-    localStorage.setItem("counter", counter);
+let data{
+    classic=0;
+    christmas=0;
 }
-function reset(){
-  localStorage.setItem("reset",0);
+
+function addOne(type) {
+    if (type === "classic") {
+       data.classic++;
+       classic.textContent = data.classic;
+    } else if (type === "christmas") {
+       data.christmas++;
+      christmas.textContent = data.christmas;
+    }
+
+    const stringifiedData= JSON.stringify(data);
+    localStorage.setItem("data",stringifiedData);
 }
-classic.addEventListener("click",reset);
-classic.addEventListener("click",addOne);
-function getLocalStorage() {
-    const localCounter = localStorage.getItem("counter");
 
- counter = localCounter;
-
- sold.textContent = counter;
+function getLocalStoarage(){
+    const localData=localStorage.getItem("data");
+    data=JSON.parse(localData);
+    classic.textContent=data.classic;
+    christmas.textContent=data.christmas;
 }
-getLocalStorage();
-
-
-
-
-
-
-
-
+getLocalStoarage();
+classic.addEventListener("click",function()
+{
+    addOne("classic");
+})
+christmas.addEventListener("click",function()
+{
+    addOne("christmas");
+})

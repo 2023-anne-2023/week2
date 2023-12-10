@@ -8,36 +8,5 @@ h1{
     width:500px;
     text-align: center;
 }
-p {
-    border-radius: 50%;
-    width: 34px;
-    height: 34px;
-    padding: 10px;
-    background: #fff;
-    border: 3px solid #000;
-    color: #000;
-    text-align: center;
-    font: 32px Arial, sans-serif;
-  }
   
-  table {
-    border-collapse: collapse;
-    border: 2px solid rgb(200,200,200);
-    letter-spacing: 1px;
-    font-size: 0.8rem;
-    
-        }
-
-
-  td, th {
-    border: 1px solid rgb(190,190,190);
-    padding: 10px 20px;
-  }
-
-  td {
-    text-align: center;
-  }
-
-  caption {
-    padding: 10px;
-  }
+ 
