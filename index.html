@@ -8,25 +8,72 @@
     <script src="./app.js" defer></script>
 </head>
 <body>
-<center>
-    <img src="./images/menu.png" alt="delicious cookies" width="200" height="300"style="float:left">
-    <img src="./images/menu.png" alt="delicious cookies" width="200" height="300"style="float:right">
-    <h1>COOKIE CLICKER</h1>
-    <h1>Play the Game</h1>
-    <h1>Enjoy our delicious Cooookies</h1>
-</center>
-    <br><br><br><button>Classic Cookie</button>
-<div>
-    <img id="classic" src="./images/round.png" alt="classic cookie"width="300" height="300"/>
-    <p>0</p>
-</div>
-<div>
-    <button>Christmas Cookie</button><br><br>
-    <img id="christmas" src="./images/2.png" alt="christmas cookie"width="300" height="300"/>
-
-</div>
-
-   
-    
-</body>
-</html>
+    <center>
+        <img src="./images/menu.png" alt="delicious cookies" width="200" height="300"style="float:left">
+        <img src="./images/menu.png" alt="delicious cookies" width="200" height="300"style="float:right">
+        <h1>COOKIE CLICKER</h1>
+        <h1>Play the Game</h1>
+        <h1>Enjoy our delicious Cooookies</h1>
+    </center>
+    <br><br><br><br><button>Classic Cookie</button><br>
+       
+        <p>
+            <span id="sold">0</span>
+        </p>
+        <img id="classic" src="./images/round.png" alt="classic cookie"width="300" height="300"/>
+        
+            <table class="tb">
+            <tr>
+              <td>&nbsp;</td>
+              <th>ACHIEVEMENT</th>
+              <th>CREDIT</th>
+              <th>SOLD</th>
+              <th>INCREMENT</th>
+            </tr>
+            <tr>
+              <th><button id="buygrandma">BUY</button></th>
+              <td>GRANDMA</td>
+              <td id="grandma">0</td>
+              <td>£10</td>
+              <td>+1</td>
+              <td><img id="grandma" src="./images/grandma-b.png" alt="buy grandma"width="100" height="100"/></td>
+             </tr>
+             
+            <tr>
+                <th><button id="buyoven">BUY</button></th>
+                    <td>OVEN</td>
+                    <td id="oven">0</td>
+                    <td>£100</td>
+                    <td>+10</td>
+                    <td><img id="oven" src="./images/oven-b.png" alt="buy oven"width="100" height="100"/></td>
+            </tr>
+            <tr>
+                <th><button>BUY</button></th>
+                    <td>FACTORY</td>
+                    <td>0</td>
+                    <td>£1000</td>
+                    <td>+100</td>
+                    <td><img id="factory" src="./images/factory-b.png" alt="buy factory"width="100" height="100"/></td>
+            </tr>
+            <tr>
+                <th><button>BUY</button></th>
+                    <td>MINE</td>
+                    <td>0</td>
+                    <td>£10000</td>
+                    <td>+1000</td>
+                    <td><img id="mine" src="./images/mine.png" alt="buy mine"width="100" height="100"/></td>
+            </tr>
+            <tr>
+                <th><button>BUY</button></th>
+                    <td>BANK</td>
+                    <td>0</td>
+                    <td>£100000</td>
+                    <td>+10000</td>
+                    <td><img id="bank" src="./images/bank-b.png" alt="buy bank"width="100" height="100"/></td>
+            </tr>
+          </table>
+          <br><br><button id="resetButton">Reset</button>
+        
+        
+    </body>
+   </html>
