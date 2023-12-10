@@ -1,43 +1,72 @@
-console.log("Cookie Clicker");
-let data = {
-    classic: 0,
-    christmas: 0,
-  };
+console.log("COOKIE CLICKER");
+let counter = 0; 
+const sold = document.getElementById("sold");
+const classic= document.getElementById("classic");
+const grandma= document.getElementById("buygrandma");
 
-const classic = document.getElementById("classic");
-console.log(classic);
-const christmas = document.getElementById("christmas");
-
-let data{
-    classic=0;
-    christmas=0;
-}
-
-function addOne(type) {
-    if (type === "classic") {
-       data.classic++;
-       classic.textContent = data.classic;
-    } else if (type === "christmas") {
-       data.christmas++;
-      christmas.textContent = data.christmas;
-    }
-
-    const stringifiedData= JSON.stringify(data);
-    localStorage.setItem("data",stringifiedData);
-}
-
-function getLocalStoarage(){
-    const localData=localStorage.getItem("data");
-    data=JSON.parse(localData);
-    classic.textContent=data.classic;
-    christmas.textContent=data.christmas;
-}
-getLocalStoarage();
-classic.addEventListener("click",function()
+grandma.addEventListener("click",change);
+function change()
 {
-    addOne("classic");
-})
-christmas.addEventListener("click",function()
+
+}
+
+setInterval(addOne,1000);
+function addOne() {
+    counter++;
+    sold.textContent = counter;
+    localStorage.setItem("counter", counter);
+}
+function reset(){
+  localStorage.setItem("reset",0);
+}
+classic.addEventListener("click",reset);
+classic.addEventListener("click",addOne);
+function getLocalStorage() {
+    const localCounter = localStorage.getItem("counter");
+
+ counter = localCounter;
+
+ sold.textContent = counter;
+}
+getLocalStorage();
+
+if(counter>10)
 {
-    addOne("christmas");
-})
+  document.getElementById('table.buygrandma').style.backgroundColor="#FF0000";
+  document.increment=counter+1;
+  addOne();
+  document.credit=1;
+}
+
+if(counter>100)
+{
+  document.getElementById('table.buyoven').style.backgroundColor="#FF0000";
+  document.increment=counter+10;
+  addOne();
+  document.credit=1;
+}
+
+if(counter>1000)
+{
+  document.getElementById('table.buyfactory').style.backgroundColor="#FF0000";
+  document.increment=counter+100;
+  addOne();
+  document.credit=1;
+}
+
+if(counter>10000)
+{
+  document.getElementById('table.buymine').style.backgroundColor="#FF0000";
+  document.increment=counter+1000;
+  addOne();
+  document.credit=1;
+}
+
+if(counter>10000)
+{
+  document.getElementById('table.buybank').style.backgroundColor="#FF0000";
+  document.increment=counter+100;
+  addOne();
+  document.credit=1;
+}
+
