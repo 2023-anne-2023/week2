@@ -36,37 +36,33 @@ if(counter>10)
   document.increment=counter+1;
   addOne();
   document.credit=1;
-}
-
-if(counter>100)
+else if(counter>100)
 {
   document.getElementById('table.buyoven').style.backgroundColor="#FF0000";
   document.increment=counter+10;
   addOne();
   document.credit=1;
 }
-
-if(counter>1000)
+else if(counter>1000)
 {
   document.getElementById('table.buyfactory').style.backgroundColor="#FF0000";
   document.increment=counter+100;
   addOne();
   document.credit=1;
 }
-
-if(counter>10000)
+else if(counter>10000)
 {
   document.getElementById('table.buymine').style.backgroundColor="#FF0000";
   document.increment=counter+1000;
   addOne();
   document.credit=1;
 }
-
-if(counter>10000)
+else(counter>10000)
 {
   document.getElementById('table.buybank').style.backgroundColor="#FF0000";
   document.increment=counter+100;
   addOne();
   document.credit=1;
+}
 }
 
